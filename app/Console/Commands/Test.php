@@ -39,11 +39,10 @@ class Test extends Command
     {
         $helloworld = $this->option('helloworld');
         $bar = $this->output->createProgressBar(2);
-        $bar->start();
 
-        
-        $this->line("");
         $this->line('Starting command');
+        $bar->start();
+        $this->line("");
         $this->line("Return -> ". $helloworld);
         $bar->advance();
 
